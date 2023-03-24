@@ -1,0 +1,27 @@
+{
+    "id": "5FDAF8A0",
+    "path": "C:/Prg-Win/2023_invitro/invitro_efields/src/get_efield_value.R",
+    "project_path": "src/get_efield_value.R",
+    "type": "r_source",
+    "hash": "1305919385",
+    "contents": "",
+    "dirty": false,
+    "created": 1679580175816.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "21,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1679582037,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1679582038001,
+    "read_only": false,
+    "read_only_alternatives": []
+}
