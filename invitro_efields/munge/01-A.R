@@ -1,3 +1,3 @@
 # Example preprocessing script.
-data <- rbind(sim_001, sim_002)
-rm(sim_001, sim_002)
+data <- rbind(sim_001, sim_002, sim_003, sim_004, sim_005, sim_006)
+rm(sim_001, sim_002, sim_003, sim_004, sim_005, sim_006)

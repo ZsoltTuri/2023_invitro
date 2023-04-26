@@ -1,7 +1,7 @@
 library('ProjectTemplate')
 load.project()
 
-# Define search parameters -------
+# Define search parameters
 params <- list()
 
 # 1. brain tissue properties 
@@ -10,7 +10,7 @@ params["bt_width"] <- 4.9
 # 1.2. depth of brain tissue in mm
 params["bt_depth"] <- 3.7  
 # 1.3. height of brain tissue in mm
-params["bt_height"] <- 0.2
+params["bt_height"] <- 0.3
 
 # 2. Petri dish properties
 params["liquid_height"] <- 10
@@ -24,3 +24,7 @@ params["coil_distance"] <- 1
 # Get electric field results
 results <- get_efield(params)
 results
+
+# some useful functions
+range(data$bt_height)
+str(data)
