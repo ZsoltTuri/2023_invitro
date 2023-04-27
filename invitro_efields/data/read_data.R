@@ -4,3 +4,8 @@ sim_003 <- readxl::read_excel(file.path('data', 'top', 'simulation_003_results_1
 sim_004 <- readxl::read_excel(file.path('data', 'top', 'simulation_004_results_1-100_MSO.xlsx'), col_names = TRUE)
 sim_005 <- readxl::read_excel(file.path('data', 'top', 'simulation_005_results_1-100_MSO.xlsx'), col_names = TRUE)
 sim_006 <- readxl::read_excel(file.path('data', 'top', 'simulation_006_results_1-100_MSO.xlsx'), col_names = TRUE)
+
+sim_007 <- readxl::read_excel(file.path('data', 'bottom', 'simulation_007_results_1-100_MSO.xlsx'), col_names = TRUE)
+sim_008 <- readxl::read_excel(file.path('data', 'bottom', 'simulation_008_results_1-100_MSO.xlsx'), col_names = TRUE)
+sim_009 <- readxl::read_excel(file.path('data', 'bottom', 'simulation_009_results_1-100_MSO.xlsx'), col_names = TRUE)
+sim_010 <- readxl::read_excel(file.path('data', 'bottom', 'simulation_010_results_1-100_MSO.xlsx'), col_names = TRUE)
