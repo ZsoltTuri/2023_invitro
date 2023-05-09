@@ -7,9 +7,9 @@ load.project()
 params <- list()
 # 1. brain tissue properties 
 # 1.1. width of brain tissue in mm
-params$bt_width <- 4   
+params$bt_width <- 3.4   
 # 1.2. depth of brain tissue in mm
-params$bt_depth <- 3  
+params$bt_depth <- 2.8  
 # 1.3. height of brain tissue in mm
 params$bt_height <- 0.15
 # 2. Petri dish properties
@@ -48,4 +48,11 @@ search2
 str(data)
 range(data$bt_height)
 unique(data$bt_height)
-unique(data$bt_width)
+length(unique(data$bt_height))
+length(unique(data$mso))
+unique(round(data$bt_width, 2))
+round(unique(data$bt_depth), 2)
+length(unique(data$bt_width))
+length(unique(data$bt_depth))
+a <- unique(data$bt_width)[-1]
+tail(unique(data$bt_width), 1)

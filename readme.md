@@ -7,16 +7,25 @@
 
 ## Variables
 + bt_width: widht of brain tissue in mm.
+	+ range: from 2.66 to 4.88 mm
+	+ 31 unique values
 + bt_depth: depth of brain tissue in mm.
+	+ range: from 2.1 to 3.84 mm
+	+ 31 unique values
 + bt_height: height of brain tissue in mm.
 	+ value ranges from 0.15 mm to 0.4 mm with a step size of 0.05 mm.
+	+ 6 unique values
 + liquid_height: height of the liquid in the Petri dish in mm. 
+	+ 10 mm: petri dish is full with liquid_height
+	+ 2.16: 2 mm + brain tissue height of 0.15 mm + 0.01 mm (10 micron) liquid on the top of the brain tissue 
 + coil_distance: 
 	+ value ranges from -3 to 3 mm with a step size of 1 mm.
+	+ 6 unique values
 	+ if value is positive: distance between the top (lid) of the Petri dish and the TMS coil in mm. This is stimulating "from the top".
 	+ if value is negative: distance between the bottom of the Petri dish and the TMS coil in mm. This is stimulating "from below".
 + mso: maximum stimulator intensity in percentage
 	+ value ranges from 1% MSO (lowest possible intensity) to 100% MSO (heighest possible intensity).
+	+ 100 unique values
 + EF_min: minimum electric field.
 + EF_mean: mean electric field. 
 + EF_median: median electric field. 
