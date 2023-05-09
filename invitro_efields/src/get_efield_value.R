@@ -56,3 +56,7 @@ length(unique(data$bt_width))
 length(unique(data$bt_depth))
 a <- unique(data$bt_width)[-1]
 tail(unique(data$bt_width), 1)
+
+# figure
+ggplot(data = data, aes(y =  EF_median)) +
+       geom_boxplot()

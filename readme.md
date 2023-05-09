@@ -6,7 +6,7 @@
 3. Download this github repository to a desired location on your notebook/computer.
 
 ## Variables
-+ bt_width: widht of brain tissue in mm.
++ bt_width: width of brain tissue in mm.
 	+ range: from 2.66 to 4.88 mm
 	+ 31 unique values
 + bt_depth: depth of brain tissue in mm.
