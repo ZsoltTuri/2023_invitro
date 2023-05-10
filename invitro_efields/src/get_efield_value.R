@@ -7,9 +7,9 @@ load.project()
 params <- list()
 # 1. brain tissue properties 
 # 1.1. width of brain tissue in mm
-params$bt_width <- 3.4   
+params$bt_width <- 4   
 # 1.2. depth of brain tissue in mm
-params$bt_depth <- 2.8  
+params$bt_depth <- 3  
 # 1.3. height of brain tissue in mm
 params$bt_height <- 0.15
 # 2. Petri dish properties
@@ -44,7 +44,7 @@ params$coil_distance <- -1
 search2 <- get_efield_mso_range(params)
 search2
 
-# some useful functions ----
+# Some useful functions ----
 str(data)
 range(data$bt_height)
 unique(data$bt_height)
@@ -57,6 +57,37 @@ length(unique(data$bt_depth))
 a <- unique(data$bt_width)[-1]
 tail(unique(data$bt_width), 1)
 
-# figure
-ggplot(data = data, aes(y =  EF_median)) +
-       geom_boxplot()
+# Example figures
+ggplot(data = data |> dplyr::filter(mso == 1), aes(x = bt_height, y =  EF_median)) + 
+  stat_summary(fun.data = mean_se, geom = "errorbar", alpha = 1, size = 0.5, width = 0.01) +
+  stat_summary(fun = mean, geom = "point", shape = 21, size = 2, stroke = 0.5) +
+  labs(x = "Brain tissue's height", y = "Median E-field (V/m)") +
+  scale_x_continuous(breaks = seq(from = 0.15, to = 0.4, by = 0.05)) +
+  coord_cartesian(ylim = c(0.55, 0.7)) +
+  theme_bw()
+
+ggplot(data = data |> dplyr::filter(mso == 1, coil_distance < 0), aes(x = bt_height, y =  EF_median)) + 
+  stat_summary(fun.data = mean_se, geom = "errorbar", alpha = 1, size = 0.5, width = 0.01) +
+  stat_summary(fun = mean, geom = "point", shape = 21, size = 2, stroke = 0.5) +
+  labs(x = "Brain tissue's height", y = "Median E-field (V/m)") +
+  scale_x_continuous(breaks = seq(from = 0.15, to = 0.4, by = 0.05)) +
+  coord_cartesian(ylim = c(0.7, 0.9)) +
+  theme_bw()
+
+data <- data |> 
+  dplyr::mutate('coil_position' = dplyr::case_when(
+    coil_distance < 0 ~ 'bellow',
+    coil_distance > 0 ~ 'top', 
+    TRUE ~ 'error'))
+
+ggplot(data = data |> dplyr::filter(mso == 1), aes(x = bt_height, y =  EF_median)) + 
+  facet_grid(cols = vars(coil_position)) +
+  stat_summary(fun.data = mean_se, geom = "errorbar", alpha = 1, size = 0.5, width = 0.01) +
+  stat_summary(fun = mean, geom = "point", shape = 21, size = 2, stroke = 0.5) +
+  labs(x = "Brain tissue's height", y = "Median E-field (V/m)") +
+  scale_x_continuous(breaks = seq(from = 0.15, to = 0.4, by = 0.05)) +
+  coord_cartesian(ylim = c(0.2, 0.85)) +
+  theme_bw()
+
+
+

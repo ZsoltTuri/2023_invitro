@@ -8,15 +8,15 @@
 ## Variables
 + bt_width: width of brain tissue in mm.
 	+ range: from 2.66 to 4.88 mm
-	+ 31 unique values
+	+ 31 unique values (but due to surface smoothing slight differences occur)
 + bt_depth: depth of brain tissue in mm.
 	+ range: from 2.1 to 3.84 mm
-	+ 31 unique values
+	+ 31 unique values (but due to surface smoothing slight differences occur)
 + bt_height: height of brain tissue in mm.
 	+ value ranges from 0.15 mm to 0.4 mm with a step size of 0.05 mm.
 	+ 6 unique values
 + liquid_height: height of the liquid in the Petri dish in mm. 
-	+ 10 mm: petri dish is full with liquid_height
+	+ 10 mm: petri dish is full with liquid
 	+ 2.16: 2 mm + brain tissue height of 0.15 mm + 0.01 mm (10 micron) liquid on the top of the brain tissue 
 + coil_distance: 
 	+ value ranges from -3 to 3 mm with a step size of 1 mm.
@@ -42,3 +42,8 @@ Electric field values are extracted from the volume compartment of the entire br
 4. In "get_efield_value.R", define the desired stimulation parameters (e.g., intensity, brain tissue size, etc.).
 5. You can execute lines by pressing strg + enter. 
 6. Results will be shown in the console window and in "results" variable that you can find in Environment > Global environment.
+
+## Useful link(s)
++ Tidyverse
+	+ collection of R packages designed for data science
+	+ https://www.tidyverse.org/
