@@ -10,11 +10,11 @@ params <- list()
 # Please fill in the details of your experiment below. 
 # 1. brain tissue properties 
 # 1.1. width of brain tissue in mm
-params$bt_width <- 2.5   
+params$bt_width <- 4   
 # 1.2. depth of brain tissue in mm
-params$bt_depth <- 2.1  
+params$bt_depth <- 3  
 # 1.3. height of brain tissue in mm
-params$bt_height <- 0.15
+params$bt_height <- 0.3
 # 2. Petri dish properties
 params$liquid_height <- 10
 # 3. Stimulation properties
@@ -32,18 +32,18 @@ params <- list()
 # Please fill in the details of your experiment below.
 # 1. brain tissue properties 
 # 1.1. width of brain tissue in mm
-params$bt_width <- 2.5   
+params$bt_width <- 4   
 # 1.2. depth of brain tissue in mm
-params$bt_depth <- 2.1  
+params$bt_depth <- 3  
 # 1.3. height of brain tissue in mm
-params$bt_height <- 0.15
+params$bt_height <- 0.3
 # 2. Petri dish properties
 params$liquid_height <- round(2.01 + params$bt_height, 2) 
 # 3. Stimulation properties
 # 3.1. stimulation intensity
-params$mso <- 65       
+params$mso <- 100       
 # 3.2. coil_distance (negative value: stimulation from below; positive value: Stimulation from top)
-params$coil_distance <- -3 
+params$coil_distance <- -10 
 # Get electric field results ----
 search2 <- get_efield(params)
 search2

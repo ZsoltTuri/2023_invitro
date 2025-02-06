@@ -19,8 +19,8 @@
 	+ 10 mm: petri dish is full with liquid
 	+ 2.16: 2 mm + brain tissue height of 0.15 mm + 0.01 mm (10 micron) liquid on the top of the brain tissue 
 + coil_distance: 
-	+ value ranges from -3 to 3 mm with a step size of 1 mm.
-	+ 6 unique values
+	+ value ranges from -12 to 10 mm with a step size of 1 mm.
+	+ 22 unique values
 	+ if value is positive: distance between the top (lid) of the Petri dish and the TMS coil in mm. This is stimulating "from the top".
 	+ if value is negative: distance between the bottom of the Petri dish and the TMS coil in mm. This is stimulating "from below".
 + mso: maximum stimulator intensity in percentage
