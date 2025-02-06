@@ -88,7 +88,7 @@ ggplot(data = data |> dplyr::filter(mso == 1), aes(x = bt_height, y =  EF_median
   stat_summary(fun = mean, geom = "point", shape = 21, size = 2, stroke = 0.5) +
   labs(x = "Brain tissue's height", y = "Median E-field (V/m)") +
   scale_x_continuous(breaks = seq(from = 0.15, to = 0.4, by = 0.05)) +
-  coord_cartesian(ylim = c(0.55, 0.7)) +
+  coord_cartesian(ylim = c(0.5, 0.55)) +
   theme_bw()
 
 ggplot(data = data |> dplyr::filter(mso == 1, coil_distance < 0), aes(x = bt_height, y =  EF_median)) + 
@@ -96,7 +96,7 @@ ggplot(data = data |> dplyr::filter(mso == 1, coil_distance < 0), aes(x = bt_hei
   stat_summary(fun = mean, geom = "point", shape = 21, size = 2, stroke = 0.5) +
   labs(x = "Brain tissue's height", y = "Median E-field (V/m)") +
   scale_x_continuous(breaks = seq(from = 0.15, to = 0.4, by = 0.05)) +
-  coord_cartesian(ylim = c(0.7, 0.9)) +
+  coord_cartesian(ylim = c(0.6, 0.7)) +
   theme_bw()
 
 data <- data |> 
